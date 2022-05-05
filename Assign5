@@ -1,0 +1,98 @@
+package assign5;
+
+
+import java.util.*;
+class shape
+{
+    double a,b;
+    
+  void area(){
+         
+     };
+}
+class triangle extends shape
+{  
+    
+    double area;
+   
+    void area()
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("\nEnter base: ");
+        
+        a=sc.nextInt();
+         System.out.println("\nEnter height: ");
+        
+        b=sc.nextInt();
+        area= (0.5)*a*b;
+        System.out.println("AREA OF TRIANGLE IS "+ area);
+        
+    }
+}
+class rectangle extends shape
+{
+    double area;
+    void area()
+    {
+       Scanner sc= new Scanner(System.in) ;
+         System.out.println("\nEnter length: ");
+        
+        a=sc.nextInt();
+         System.out.println("\nEnter breadth: ");
+        
+        b=sc.nextInt();
+        area= a*b;
+        System.out.println("AREA OF RECTANGLE IS "+ area);
+        
+        
+    }
+}
+class circle extends shape
+{
+    double area;
+    void area()
+    {
+       Scanner sc= new Scanner(System.in) ;
+       
+         System.out.println("\nEnter radius: ");
+        
+        b=sc.nextInt();
+        area= (3.14*b*b);
+        System.out.println("AREA OF RECTANGLE IS "+ area);
+        
+        
+    }
+}
+public class NewMain{
+public static void main(String args[])
+{   Scanner sc= new Scanner(System.in);
+int op;
+  do
+  {
+    System.out.println("Enter shape for which area is to be calculated\n1)Triangle\n2)Rectangle\n3)Circle\n4)EXIT");
+      op= sc.nextInt();
+      if(op==1)
+      {
+          triangle t1= new triangle();
+          t1.area();
+          
+      }
+      else if(op==2)
+      {
+          rectangle r1= new rectangle();
+          r1.area();
+      }
+      else if(op==3)
+      {
+          circle c1= new circle();
+          c1.area();
+      }
+  }while(op!=4);
+  
+ System.out.println("\nPROGRAM TERMINATED\n");
+ 
+
+
+
+}
+}
